@@ -1,0 +1,338 @@
+<div class="main-container container">
+    <!-- search -->
+    <div class="row mb-4">
+        <div class="col">
+            <div class="form-floating">
+                <input type="text" class="form-control is-valid" id="search" placeholder="Search">
+                <label for="search">Search for a user</label>
+                <button type="button" class="btn btn-link tooltip-btn d-block text-color-theme">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-lg btn-theme shadow-sm filter-btn" (click)="filterclick()">
+                <i class="bi bi-filter size-22"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- categories -->
+    <swiper class="categoriesswiper mb-3" [slidesPerView]="'auto'" [spaceBetween]="6.5" [pagination]="false">
+        <!-- Slides -->
+        <ng-template swiperSlide>
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <img src="assets/icons/SEARCH.png" />                
+                </div>
+            </div>
+            <p class="categoryname">Search</p>
+        </ng-template>
+        <ng-template swiperSlide>
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <img src="assets/icons/CATEGORIES.png"/>           
+                </div>
+            </div>
+            <p class="categoryname">Categories</p>
+        </ng-template>
+        <ng-template swiperSlide>
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <img src="assets/icons/TOPPLATEFORMS.png"/>                
+                </div>
+            </div>
+            <p class="categoryname">Top platforms</p>
+        </ng-template>
+        <ng-template swiperSlide>
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <img src="assets/icons/MYPLATFORMS.png"/>                
+                </div>
+            </div>
+            <p class="categoryname">My platforms</p>
+        </ng-template>                              
+    </swiper>
+
+    <!-- offerslides -->
+    <swiper class="offerslides mb-3" [slidesPerView]="1" [spaceBetween]="15" [pagination]="true" [breakpoints]="{'640': { slidesPerView: 1, spaceBetween: 10 },
+    '768': { slidesPerView: 2, spaceBetween: 20 }, '1024': { slidesPerView: 3, spaceBetween: 30 } }">
+        <!-- Slides -->
+        <ng-template swiperSlide>
+            <div class="card shadow-sm card-theme">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="assets/icons/UCHAT.png" width="120" height="120" />
+                        </div>
+                        <div class="col text-start align-self-center ps-0">
+                            <h6 class="fw-normal mb-0">Share</h6>
+                            <h2>uChat</h2>
+                            <h8>A new secure and feature full chat you need to try :)<br><br>As the technology matures and hackers get more and more active in hunting for our private data we have decided to create a uChat on UltimaOS to try to protect your privacy.</h8>
+                            <p><br>Join<br>Enter<br>Create Profile<br>Preview<br>Unlock uOS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template swiperSlide>
+            <div class="card shadow-sm card-theme">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="assets/icons/SEARCH.png" width="120" height="120" />                        
+                        </div>
+                        <div class="col text-start align-self-center ps-0">
+                            <h6 class="fw-normal mb-0">Digital Money</h6>
+                            <h2>Pay</h2>
+
+                            <p>Join<br>Enter<br>Create Profile<br>Preview<br>Unlock uOS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template swiperSlide>
+            <div class="card shadow-sm card-theme">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="assets/icons/SEARCH.png" width="120" height="120" />                        
+                        </div>
+                        <div class="col text-start align-self-center ps-0">
+                            <h6 class="fw-normal mb-0">My Platforms</h6>
+                            <h2>Create</h2>
+                            <p>Join,Enter,Create Profile,Preview,Unlock uOs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </swiper>
+    <!-- trending items -->
+    <div class="row mb-3">
+        <div class="col">
+            <h5 class="mb-0">Trending Apps</h5>
+        </div>
+    </div>
+    <!-- trending -->
+    <swiper class="trendingslides" [slidesPerView]="4" [spaceBetween]="25" [pagination]="false">
+        <!-- Slides -->
+        <ng-template swiperSlide>
+            <div class="card shadow-sm product mb-4">
+                <figure class="text-center mb-0 bg-light-warning">
+                    <img src="assets/img/product1.png" alt="">
+                </figure>
+                <div class="card-body">
+                    <p class="mb-1">
+                        <small class="text-opac">Fresh</small>
+                        <small class="float-end"><span class="text-opac">4.5</span> <i class="bi bi-star-fill text-warning"></i></small>
+                    </p>
+                    <a routerLink="/product" class="text-normal">
+                        <h6 class="text-color-theme">Red Apple</h6>
+                    </a>
+                    <div id="container">
+                        <button class="learn-more">
+                            <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">Get it</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>        
+        <ng-template swiperSlide>
+            <div class="card shadow-sm product mb-4">
+                <figure class="text-center mb-0 bg-light-warning">
+                    <img src="assets/img/product1.png" alt="">
+                </figure>
+                <div class="card-body">
+                    <p class="mb-1">
+                        <small class="text-opac">Fresh</small>
+                        <small class="float-end"><span class="text-opac">4.5</span> <i class="bi bi-star-fill text-warning"></i></small>
+                    </p>
+                    <a routerLink="/product" class="text-normal">
+                        <h6 class="text-color-theme">Red Apple</h6>
+                    </a>
+                    <div id="container">
+                        <button class="learn-more">
+                            <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">Get it </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template swiperSlide>
+            <div class="card shadow-sm product mb-4">
+                <figure class="text-center mb-0 bg-light-warning">
+                    <img src="assets/img/product1.png" alt="">
+                </figure>
+                <div class="card-body">
+                    <p class="mb-1">
+                        <small class="text-opac">Fresh</small>
+                        <small class="float-end"><span class="text-opac">4.5</span> <i class="bi bi-star-fill text-warning"></i></small>
+                    </p>
+                    <a routerLink="/product" class="text-normal">
+                        <h6 class="text-color-theme">Red Apple</h6>
+                    </a>
+                    <div id="container">
+                        <button class="learn-more">
+                            <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">Get it </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template swiperSlide>
+            <div class="card shadow-sm product mb-4">
+                <figure class="text-center mb-0 bg-light-warning">
+                    <img src="assets/img/product1.png" alt="">
+                </figure>
+                <div class="card-body">
+                    <p class="mb-1">
+                        <small class="text-opac">Fresh</small>
+                        <small class="float-end"><span class="text-opac">4.5</span> <i class="bi bi-star-fill text-warning"></i></small>
+                    </p>
+                    <a routerLink="/product" class="text-normal">
+                        <h6 class="text-color-theme">Red Apple</h6>
+                    </a>
+                    <div id="container">
+                        <button class="learn-more">
+                            <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">Get it </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template swiperSlide>
+            <div class="card shadow-sm product mb-4">
+                <figure class="text-center mb-0 bg-light-warning">
+                    <img src="assets/img/product1.png" alt="">
+                </figure>
+                <div class="card-body">
+                    <p class="mb-1">
+                        <small class="text-opac">Fresh</small>
+                        <small class="float-end"><span class="text-opac">4.5</span> <i class="bi bi-star-fill text-warning"></i></small>
+                    </p>
+                    <a routerLink="/product" class="text-normal">
+                        <h6 class="text-color-theme">Red Apple</h6>
+                    </a>
+                    <div id="container">
+                        <button class="learn-more">
+                            <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">Get it </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template swiperSlide>
+            <div class="card shadow-sm product mb-4">
+                <figure class="text-center mb-0 bg-light-warning">
+                    <img src="assets/img/product1.png" alt="">
+                </figure>
+                <div class="card-body">
+                    <p class="mb-1">
+                        <small class="text-opac">Fresh</small>
+                        <small class="float-end"><span class="text-opac">4.5</span> <i class="bi bi-star-fill text-warning"></i></small>
+                    </p>
+                    <a routerLink="/product" class="text-normal">
+                        <h6 class="text-color-theme">Red Apple</h6>
+                    </a>
+                    <div id="container">
+                        <button class="learn-more">
+                            <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">Get it </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template swiperSlide>
+            <div class="card shadow-sm product mb-4">
+                <figure class="text-center mb-0 bg-light-warning">
+                    <img src="assets/img/product1.png" alt="">
+                </figure>
+                <div class="card-body">
+                    <p class="mb-1">
+                        <small class="text-opac">Fresh</small>
+                        <small class="float-end"><span class="text-opac">4.5</span> <i class="bi bi-star-fill text-warning"></i></small>
+                    </p>
+                    <a routerLink="/product" class="text-normal">
+                        <h6 class="text-color-theme">Red Apple</h6>
+                    </a>
+                    <div id="container">
+                        <button class="learn-more">
+                            <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">Get it </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template swiperSlide>
+            <div class="card shadow-sm product mb-4">
+                <figure class="text-center mb-0 bg-light-warning">
+                    <img src="assets/img/product1.png" alt="">
+                </figure>
+                <div class="card-body">
+                    <p class="mb-1">
+                        <small class="text-opac">Fresh</small>
+                        <small class="float-end"><span class="text-opac">4.5</span> <i class="bi bi-star-fill text-warning"></i></small>
+                    </p>
+                    <a routerLink="/product" class="text-normal">
+                        <h6 class="text-color-theme">Red Apple</h6>
+                    </a>
+                    <div id="container">
+                        <button class="learn-more">
+                            <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">Get it </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template swiperSlide>
+            <div class="card shadow-sm product mb-4">
+                <figure class="text-center mb-0 bg-light-warning">
+                    <img src="assets/img/product1.png" alt="">
+                </figure>
+                <div class="card-body">
+                    <p class="mb-1">
+                        <small class="text-opac">Fresh</small>
+                        <small class="float-end"><span class="text-opac">4.5</span> <i class="bi bi-star-fill text-warning"></i></small>
+                    </p>
+                    <a routerLink="/product" class="text-normal">
+                        <h6 class="text-color-theme">Red Apple</h6>
+                    </a>
+                    <div id="container">
+                        <button class="learn-more">
+                            <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">Get it </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </swiper>
+</div>
