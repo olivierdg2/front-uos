@@ -10985,18 +10985,18 @@ body {
 
 .btn-theme {
   color: #FFFFFF;
-  background-color: #03a9f4;
+  background-color: #3b3737;
 }
 
 .btn-theme:hover, .btn-theme:focus {
-  color: inherit;
-  background-color: #0391d1;
+  color: black;
+  background-color: white;
 }
 
 .btn-theme:active,
 .btn-theme .active {
-  color: inherit;
-  background-color: #0278ad;
+  color: black;
+  background-color: white;
 }
 
 .btn-outline-pink {
