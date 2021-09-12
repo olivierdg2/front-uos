@@ -34,8 +34,13 @@ Table of content
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 /* 2. custome template defined variables */
-
-
+@font-face{ 
+	font-family: 'ebcorp-black';
+	src: url('../fonts/titilliumweb-regular-webfont.woff') format('woff');
+}
+.checked {
+  color: orange;
+}
 :root {
   --bs-blue: #7297f8;
   --bs-indigo: #6610f2;
@@ -4407,6 +4412,7 @@ fieldset:disabled .btn {
 }
 
 .card {
+  font-family: "ebcorp-black";
   position: relative;
   display: flex;
   flex-direction: column;
