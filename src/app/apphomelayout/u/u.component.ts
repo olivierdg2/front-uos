@@ -43,7 +43,7 @@ export class UComponent implements OnInit {
     // hardcoded dark mode
     html.classList.add('dark-mode');
   }
-
+  
   ngOnInit(): void {
     var html5Slider = document.getElementById('rangeslider');
     var inputNumber = document.getElementById('input-number');
