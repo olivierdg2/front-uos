@@ -48,6 +48,26 @@ export class UComponent implements OnInit {
     var html5Slider = document.getElementById('rangeslider');
     var inputNumber = document.getElementById('input-number');
     var select = document.getElementById('input-select');
+
+    const myVideo = document.getElementById('video') as any;
+    let isVideoPIP = false;
+    myVideo.addEventListener('loadeddata', ()=>{
+    console.log('Player ready!');
+    })
+  
+    window.addEventListener('scroll', ()=>{
+      if (window.pageYOffset> 100) {
+        if (!myVideo.paused && myVideo.currentTime > 0 
+            && !myVideo.ended && !isVideoPIP) {
+          console.log('runPip')
+          myVideo.requestPictureInPicture()
+          .then(()=>{isVideoPIP = true;})
+          ;
+        }
+      }
+    })  
+;
+
   }
 
   filterclick(){
