@@ -56,7 +56,7 @@ export class UComponent implements OnInit {
     })
   
     window.addEventListener('scroll', ()=>{
-      if (window.pageYOffset> 100) {
+      if (window.pageYOffset> 0) {
         if (!myVideo.paused && myVideo.currentTime > 0 
             && !myVideo.ended && !isVideoPIP) {
           console.log('runPip')

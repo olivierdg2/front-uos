@@ -6,7 +6,9 @@ $black: #282936;
   transition: $property $duration $ease;
 }
 
-
+#search_bar {
+  margin-left: 66%;
+}
 
 button {
   &.learn-more {
